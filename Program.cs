@@ -4,17 +4,18 @@ class Program
 {
     static void Main ()
     {
+        Console.WriteLine("Digite um texto:");
+
         //Lê a linha digitada pelo usuario
-        string entrada = Console.ReadLine();
+        string entrada = Console.ReadLine() ?? string.Empty;
 
         //Remove os espaços do início e do fim
-        string textoSemEspaços = entrada.Trim();
+        string textoSemEspacos = entrada.Trim();
 
-        // Pega o primeiro caractere da string limpa
-        char primeiroCaractere = textoSemEspacos[0];
-
-        //exibe o resultado esperado
-        Console.WriteLine(primeiroCaractere);
+        if (textoSemEspacos.Length > 0)
+        {
+            Console.WriteLine(textoSemEspacos[0]);
+        }
 
     }
 
